@@ -1,0 +1,42 @@
+{
+  "name": "nowplaying-widgets-sdk",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "StephanWithPH",
+  "license": "ISC",
+  "description": "The NowPlaying widgets SDK can be used to build widgets that receive data from the NowPlaying application (nowplayingobs.com). This SDK provides handy React hooks and utility functionality that can be used freely.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StephanWithPH/nowplaying-widgets-sdk-npm.git"
+  },
+  "main ": "dist/index.js",
+  "scripts": {
+    "prepare": "husky",
+    "build": "babel src --out-dir dist"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.12.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3",
+    "typescript-eslint": "^8.15.0"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
