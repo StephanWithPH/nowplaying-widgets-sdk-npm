@@ -9,20 +9,28 @@
     "type": "git",
     "url": "https://github.com/StephanWithPH/nowplaying-widgets-sdk-npm.git"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "main ": "dist/index.js",
   "scripts": {
     "prepare": "husky",
-    "build": "babel src --out-dir dist"
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx,.js,.jsx\"",
+    "build:types": "npx tsc",
+    "build": "npm run build:types && npm run build:js"
   },
   "dependencies": {
-    "@babel/cli": "^7.25.9",
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
     "@eslint/js": "^9.15.0",
     "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
@@ -31,6 +39,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "3.3.3",
+    "typescript": "^5.7.2",
     "typescript-eslint": "^8.15.0"
   },
   "lint-staged": {

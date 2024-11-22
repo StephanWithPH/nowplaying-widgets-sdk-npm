@@ -6,7 +6,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { ignores: ["/*", "!src/**/*", "/node_modules/", "/build/", "/dist/"]},
+  { ignores: ["/*", "/dist", "!src/**/*", "/node_modules/", "/build/", "/dist/"]},
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
