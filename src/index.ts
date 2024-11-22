@@ -1,1 +1,3 @@
-export { henk } from "./testje";
+import useNowPlayingData from "./hooks/useNowPlayingData";
+
+export { useNowPlayingData };

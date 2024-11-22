@@ -17,13 +17,14 @@
   "main ": "dist/index.js",
   "scripts": {
     "prepare": "husky",
-    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx,.js,.jsx\"",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx,.js,.jsx\" --delete-dir-on-start",
     "build:types": "npx tsc",
-    "build": "npm run build:types && npm run build:js"
+    "build": "npm run build:js && npm run build:types"
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.25.9",
